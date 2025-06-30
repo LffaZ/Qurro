@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    height: 100vh;
+    background: #f9f9f9;
+}
+
+/* Header yang menampilkan nama surah dan informasi ayat */
+.surah-header {
+    display: flex;
+    justify-content: space-between;  /* Space between surah name and verse info */
+    align-items: center;
+    background-color: #657362; /* Dark green background */
+    color: white;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.surah-name {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+    margin-right: -90px;
+}
+
+.surah-name h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.surah-name p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.verse-info {
+    text-align: right; /* Align verse info to the right */
+}
+
+.verse-info p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+/* Konten utama setelah header */
+.container {
+    display: flex;
+    width: 100%;
+    flex: 1;
+}
+
+/* Left Panel untuk Microphone */
+.left-panel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a8bfa3;
+    flex-direction: column;
+    text-align: center;
+}
+
+.left-panel h1 {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.left-panel .microphone img {
+    font-size: 40px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #657362;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.left-panel .microphone img:hover {
+    background-color: #869982;
+    animation: zoomInOut 1.5s infinite ease-in-out;
+}
+
+.left-panel .microphone img.recording {
+    background-color: #db3434;
+    animation: none;
+}
+
+/* Right Panel untuk Menampilkan Ayat */
+.right-panel {
+    flex: 1;
+    background: #869982;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.right-panel h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.arabic-text {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+/* Animasi Zoom In dan Zoom Out pada Icon Mikrofon */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 10px;
+}
+
+.notifications {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+}
+
+.toast {
+    position: relative;
+    align-items: center;
+    padding: 10px;
+    color: black;
+    margin-bottom: 10px;
+    width: 400px;
+    height: 65px;
+    display: grid;
+    grid-template-columns: 70px 1fr 70px;
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    --color: green;
+    background-color: rgb(228, 228, 228);
+    animation: show 0.3s ease 1 forwards
+}
+
+.toast i {
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
+
+.toast .title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.toast span, .toast i:nth-child(3) {
+    color: black;
+    opacity: 0.6;
+    font-size: 16px;
+}
+
+@keyframes show {
+    0% {
+        transform: translateX(100%);
+    }
+    40% {
+        transform: translateX(-5%);
+    }
+    80% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-10%);
+    }
+}
+
+.toast::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color);
+    width: 100%;
+    height: 3px;
+    content: '';
+    box-shadow: 0 0 10px var(--color);
+    animation: timeOut 5s linear 1 forwards
+}
+
+.toast.success i {
+    color: green;
+}
+
+@keyframes timeOut {
+    to {
+        width: 0;
+    }
+}
+
+/* .toast.error {
+    --color: #f24d4c;
+    background-image: 
+        linear-gradient(
+            to right, #f24d4c55, #22242F 30%
+        );
+}
+
+.toast.warning {
+    --color: #e9bd0c;
+    background-image: 
+        linear-gradient(
+            to right, #e9bd0c55, #22242F 30%
+        );
+}
+
+.toast.info {
+    --color: #3498db;
+    background-image: 
+        linear-gradient(
+            to right, #3498db55, #22242F 30%
+        );
+} */
