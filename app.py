@@ -123,5 +123,8 @@ def dashboard():
         flash('User not found', 'danger')
         return redirect(url_for('login'))
 
+@app.route('/profile')
+def profile():
+    return render_template('profilepage.html')
 if __name__ == "__main__":
     app.run(debug=True)
