@@ -1,0 +1,1 @@
+# Tajwid checking logic 

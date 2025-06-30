@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Hidayatullah'; /* Nama font yang akan dipanggil di CSS */
+    src: url('../assets/hidayatullah\ DEMO.ttf') format('truetype'); /* Path ke file font */
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'Hidayatullah', sans-serif;
+    letter-spacing: 10px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #657362;
+    font-size: 25px;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #434d41;
+    color: white;
+    padding: 15px ;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+}
+
+.login-button {
+    background-color: white;
+    color: #434d41;
+    font-size: 18px;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.login-button:hover {
+    transform: scale(1.1); /* Membuat tombol lebih besar saat hover */
+}
+
+main {
+    padding: 40px 20px;
+}
+
+.greeting {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.surat-list {
+    margin-top: 30px;
+}
+
+.surat-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.surat-list li {
+    background: white;
+    border: 1px solid #434d41;
+    border-radius: 10px;
+    margin: 15px 0;
+    padding: 20px 30px;
+    position: relative;
+    transition: box-shadow 0.3s, transform 0.3s; /* Menambahkan efek transformasi */
+    font-size: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.surat-list li:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #434d41;
+    color: white;
+    transform: scale(1.05); /* Sedikit memperbesar saat hover */
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #434d41;
+    color: #657362;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 18px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan shadow untuk footer */
+}
+
+.surat-list li .description {
+    font-size: 14px; /* Ukuran font lebih kecil */
+    color: #666; /* Warna teks yang lebih pudar */
+    margin-top: 10px; /* Jarak sedikit antara nama surah dan deskripsi */
+    display: block; /* Agar teks pindah ke baris baru */
+}
+
+.watermark {
+    /* PENTING: Mengeluarkan gambar dari alur normal dokumen */
+    position: absolute;
+
+    /* PENTING: Menempatkan gambar di belakang konten lain */
+    z-index: -1;
+
+    /* Membuat gambar menjorok keluar dari pojok kiri atas */
+    top: 150px;
+    left: -40px;
+
+    /* Mengatur ukuran dan transparansi gambar */
+    width: 40vw; /* Atur sesuai ukuran logo/gambar Anda */
+    height: 150vh;
+    opacity: 0.2; /* Atur tingkat transparansi (0.0 - 1.0) */
+}
