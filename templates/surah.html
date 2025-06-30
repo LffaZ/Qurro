@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tekan dan Bicara</title>
-    <link rel="stylesheet" href="../styles/surah.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/surah.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
@@ -26,7 +26,7 @@
         <div class="left-panel">
             <h1>Tekan dan Bicara</h1>
             <div class="microphone">
-                <img src="../assets/mic.png" alt="Microphone" id="microphone-icon">
+                <img src="{{ url_for('static', filename='img/mic.png') }}" alt="Microphone" id="microphone-icon">
             </div>
         </div>
         <div class="right-panel">
@@ -37,6 +37,6 @@
 
     <div class="notifications"></div>
 
-    <script src="../styles/surah.js"></script>
+    <script src="{{ url_for('static', filename='js/surah.js') }}"></script>
 </body>
 </html>

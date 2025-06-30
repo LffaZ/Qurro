@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Hidayatullah'; /* Nama font yang akan dipanggil di CSS */
-    src: url('../assets/hidayatullah\ DEMO.ttf') format('truetype'); /* Path ke file font */
+    src: url('/static/fonts/hidayatullah.ttf') format('truetype'); /* Path ke file font */
     font-weight: normal;
     font-style: normal;
 }

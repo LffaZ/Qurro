@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../src/styles/homepage.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+    
     <title>QURRO</title>
 </head>
 <body>
     <header>
         <div class="header-content">
             <h1>Qurro</h1>
-            <button class="login-button">Login</button>
+            <a href="{{ url_for('login') }}" class="login-button">Login</a>
         </div>
     </header>
     <main>
-        <img src="../assets/background.jpeg" alt="Watermark" class="watermark">
+        <img src="{{ url_for('static', filename='img/background.jpeg') }}" alt="Watermark" class="watermark">
         <section class="greeting">
-            <h2>Assalamu'alaikum, <span id="user-name">[User]</span>!👋</h2>
+            <h2>Assalamu'alaikum, <span id="user-name">{{ username }}</span>!👋</h2>
             <p>Selamat datang di QURRO. Mari belajar tajwid bersama!</p>
         </section>
         <section class="surat-list">
             <h3>Daftar Surah</h3>
             <ul>
                 <li class="surah-item">
-                    <div class="badge">
-                        <img src="../assets/emblem.png" alt="Emblem" class="badge-img">
+                    <div class="badge"> 
+                        <img src="{{ url_for('static', filename='img/emblem.png') }}" alt="Emblem" class="badge-img">
                         <div class="badge-number">1</div>
                     </div>
                     <div class="text-content">
@@ -34,7 +35,7 @@
                 </li>
                 <li class="surah-item">
                     <div class="badge">
-                        <img src="../assets/emblem.png" alt="Emblem" class="badge-img">
+                        <img src="{{ url_for('static', filename='img/emblem.png') }}" alt="Emblem" class="badge-img">
                         <div class="badge-number">105</div>
                     </div>
                     <div class="text-content">
@@ -44,7 +45,7 @@
                 </li>
                 <li class="surah-item">
                     <div class="badge">
-                        <img src="../assets/emblem.png" alt="Emblem" class="badge-img">
+                        <img src="{{ url_for('static', filename='img/emblem.png') }}" alt="Emblem" class="badge-img">
                         <div class="badge-number">107</div>
                     </div>
                     <div class="text-content">
@@ -54,7 +55,7 @@
                 </li>
                 <li class="surah-item">
                     <div class="badge">
-                        <img src="../assets/emblem.png" alt="Emblem" class="badge-img">
+                        <img src="{{ url_for('static', filename='img/emblem.png') }}" alt="Emblem" class="badge-img">
                         <div class="badge-number">112</div>
                     </div>
                     <div class="text-content">
@@ -64,7 +65,7 @@
                 </li>
                 <li class="surah-item">
                     <div class="badge">
-                        <img src="../assets/emblem.png" alt="Emblem" class="badge-img">
+                        <img src="{{ url_for('static', filename='img/emblem.png') }}" alt="Emblem" class="badge-img">
                         <div class="badge-number">114</div>
                     </div>
                     <div class="text-content">

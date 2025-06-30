@@ -1,5 +1,0 @@
-fastapi 
-uvicorn 
-deepspeech 
-pydantic 
-sqlalchemy 

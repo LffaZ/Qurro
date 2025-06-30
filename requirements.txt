@@ -1,0 +1,14 @@
+git+https://github.com/openai/whisper.git
+torch
+torchaudio
+torchvision
+ffmpeg-python
+SpeechRecognition
+pyaudio
+Flask
+openai-whisper
+imageio-ffmpeg
+python-dotenv
+flask-sqlalchemy
+supabase
+psycopg2

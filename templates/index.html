@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koreksi Bacaan Al-Qur'an</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Jika ada file CSS -->
+</head>
+<body>
+    <h1>Rekam Bacaan Ayat Al-Qur'an</h1>
+
+    <button id="startRecord">Mulai Rekam</button>
+    <button id="stopRecord" disabled>Stop Rekam</button>
+
+    <audio id="audioPlayback" controls></audio>
+
+    <div id="status"></div> <!-- Menampilkan status rekaman -->
+    <div id="feedback"></div> <!-- Menampilkan feedback dari transkripsi -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
